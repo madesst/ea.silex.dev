@@ -1,0 +1,20 @@
+{% extends "email/layout.twig" %}
+
+{% block message %}
+	<p style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color: #333;">Ваш код:</p>
+	<p style="font-family:Arial, Helvetica, sans-serif; font-size:18px; color: #333; font-weight:bold;">
+		{{ key.value }}</p>
+	<p style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color: #333;">Инструкция по активации и запуску
+		игры:</p>
+	<ol style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color: #333;">
+		<li>Перейдите на <a style="font-family:Arial, Helvetica, sans-serif; font-size:12px;" href="http://o.ea.com/17688">сайт</a>
+		</li>
+		<li>Войдите с помощью вашего Origin аккаунта или же зарегистрируйте новый.</li>
+		<li>Введите ваш код и нажмите «Активировать».</li>
+		<li>Нажмите «Запустить Origin» и начните скачивание игры</li>
+	</ol>
+	<p style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color: #333;">Пожалуйста, следите за обновлениями на
+		<a style="font-family:Arial, Helvetica, sans-serif; font-size:12px;" href="http://o.ea.com/17688">сайте</a> игры и в
+		нашей <a style="font-family:Arial, Helvetica, sans-serif; font-size:12px;"
+		         href="https://vk.com/easportsfifa">группе</a>, чтобы узнать о начале следующего этапа тестирования.</p>
+{% endblock %}

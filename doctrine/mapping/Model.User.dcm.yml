@@ -1,0 +1,41 @@
+Model\User:
+  type: entity
+  repositoryClass: Model\UserRepo
+  table: _user
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    username:
+      type: string
+      length: 50
+      nullable: false
+    created_at:
+      type: time
+      nullable: false
+    email:
+      type: string
+      length: 50
+      nullable: false
+      unique: true
+    birthdate:
+      type: datetime
+      nullable: false
+    source_id:
+      type: string
+      length: 50
+      nullable: false
+    active:
+      type: boolean
+      nullable: false
+      options:
+        default: false
+  oneToOne:
+    token:
+      targetEntity: Model\Token
+      mappedBy: user
+    key:
+      targetEntity: Model\Key
+      mappedBy: user

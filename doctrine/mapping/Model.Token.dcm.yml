@@ -1,0 +1,33 @@
+Model\Token:
+  type: entity
+  repositoryClass: Model\TokenRepo
+  table: token
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    value:
+      type: string
+      length: 50
+      nullable: false
+      unique: true
+    created_at:
+      type: time
+      nullable: false
+    updated_at:
+      type: time
+      nullable: true
+    active:
+      type: boolean
+      nullable: false
+      options:
+        default: true
+  oneToOne:
+    user:
+      targetEntity: Model\User
+      inversedBy: token
+      joinColumn:
+        name: user_id
+        referencedColumnName: id
