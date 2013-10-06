@@ -33,7 +33,8 @@ $app->register(new DoctrineServiceProvider(), array(
 	"db.options" => array(
 		"driver" => "pdo_pgsql",
 		'user' => 'ea',
-		'dbname' => 'ea'
+		'dbname' => 'ea',
+		'password' => '5b344ac52a0192941b46a8bf252c859c'
 	)
 ));
 
