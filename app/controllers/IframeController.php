@@ -138,13 +138,14 @@ class HomeController extends BaseController
 		$timestamp = new \DateTime();
 		$timestamp->setTimestamp(time());
 
-		$token->setActive(false);
 		$token->setUpdatedAt($timestamp);
+		$token->setActive(false);
 
 		$user = $token->getUser();
 		$user->setActive(true);
 
 		$key->setUser($user);
+		$key->setUpdatedAt($timestamp);
 		$key->setActive(false);
 
 		$this->getSesClient()->sendEmail(array(
