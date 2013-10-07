@@ -59,7 +59,7 @@ class HomeController extends BaseController
 			if ($form->isValid()) {
 				$user = $form->getData();
 
-				if ($user->getAge() < 14) {
+				if ($user->getAge() < 18) {
 					return $this->render('iframe/error/age');
 				}
 
